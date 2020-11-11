@@ -197,13 +197,13 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: argocd-application-controller
+      app.kubernetes.io/name: argocd-application-controller
   strategy:
     type: Recreate
   template:
     metadata:
       labels:
-        app: argocd-application-controller
+        app.kubernetes.io/name: argocd-application-controller
       annotations:
         prometheus.io/scrape: "true"
         prometheus.io/port: "8082"
